@@ -27,6 +27,36 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    // Less settings
+    less: {
+      development: {
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2
+        },
+        files: {
+          //target.css file: source.less file
+          'app/styles/main.css': 'app/styles/main.less'
+        }
+      }
+    },
+
+    recess: {
+      options: {
+            compile: true
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles',
+                src: '{,*/}*.less',
+                dest: '.tmp/styles/',
+                ext: '.css'
+           }]
+        }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -46,10 +76,14 @@ module.exports = function (grunt) {
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        tasks: ['newer:less', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
+      },
+      recess: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['recess:dist']
       },
       livereload: {
         options: {
@@ -212,6 +246,12 @@ module.exports = function (grunt) {
       }
     },
 
+    cssmin: {
+      options: {
+        root: '<%= yeoman.app %>'
+      }
+    },
+
     // The following *-min tasks will produce minified files in the dist folder
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
@@ -369,6 +409,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
+      'less',
       'autoprefixer',
       'connect:livereload',
       'watch'
@@ -383,6 +424,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'concurrent:test',
+    'less',
     'autoprefixer',
     'connect:test',
     'karma'
@@ -393,6 +435,7 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'less',
     'autoprefixer',
     'concat',
     'ngmin',
