@@ -25,8 +25,16 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        views: {
+          'viewA': { 
+            templateUrl: 'views/main-image.html',
+            controller: 'MainCtrl'
+          },
+          'viewB': {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
+          }
+        }
       })
       .state('about', {
         url: '/about',
