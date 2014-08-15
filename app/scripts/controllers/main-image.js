@@ -9,9 +9,9 @@
  */
 angular
   .module('portfolioApp')
+
   .controller('MainCtrl', function ($scope) {
 
     $scope.dummy = [];
-
 
   });
