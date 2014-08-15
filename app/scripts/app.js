@@ -31,7 +31,8 @@ angular
             controller: 'MainCtrl'
           },
           'viewB': {
-            templateUrl: 'views/portfolio.html'
+            templateUrl: 'views/portfolio.html',
+            controller: 'PortfolioCtrl'
           },
           'viewC': {
             templateUrl: 'views/about.html',

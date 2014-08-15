@@ -9,4 +9,8 @@
  */
 angular
   .module('portfolioApp')
-  .controller('MainCtrl', []);
+  .controller('MainCtrl', function($scope) {
+
+    $scope.dummy = [];
+
+  });
