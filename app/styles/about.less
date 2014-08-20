@@ -1,11 +1,17 @@
+@lightblue: #BDD9FF;
+
 .about {
-  //background-color: #EFEEF3;
+  height: 500px;
   background-image: url('/images/titanium-texture-cropped.jpg');
+
   .about-header {
     padding-bottom: 10px;
     text-align: center;
-    font-family: 'Code', Futura, sans-serif;
-    color: #FFF;
+    h1 {
+      font-family: 'Code', Futura, sans-serif;
+      color: #FFF;
+      font-size: 48px;
+    }
   }
 
   img {
@@ -15,27 +21,30 @@
 
   .well {
     margin-top: 15px;
+    background-color: #ECF4FF;
+    font-size: 16px;
   }
 
   .about-credential-list {
    list-style-type: none;
+   padding-left: 0;
 
-   li {
+  li {
       display: block;
       position: relative;
       float: left;
       padding: 5px;
       margin: 3px;
-    }
+      }
 
     li:first-child{
       padding: 5px 5px 5px 0;
-      margin-left: 0;
-    }
+      margin-left: 27px;
+      }
 
     li:last-child{
       padding: 5px 0 5px 5px;
-    }
+      }
   }
 }
 
@@ -43,30 +52,30 @@
 
 .icon-html5-02 {
   font-size: 48px;
-  color: #BDD9FF;
+  color: @lightblue;
 }
 
 .icon-css3-02 {
   font-size: 48px;
-  color: #BDD9FF;
+  color: @lightblue;
 }
 
 .icon-prog-js02 {
   font-size: 48px;
-  color: #BDD9FF;
+  color: @lightblue;
 }
 
 .icon-prog-jquery {
   font-size: 48px;
-  color: #BDD9FF;
+  color: @lightblue;
 }
 
 .icon-angularjs {
   font-size: 48px;
-  color: #BDD9FF;
+  color: @lightblue;
 }
 
-.email {
+.contact {
   margin: 50px 0 50px 0;
   width: 50px;
   margin-left: auto;
