@@ -31,10 +31,14 @@ angular
             controller: 'MainCtrl'
           },
           'viewB': {
+            templateUrl: 'views/credentials.html',
+            controller: 'CredentialsCtrl'
+          },
+          'viewC': {
             templateUrl: 'views/portfolio.html',
             controller: 'PortfolioCtrl'
           },
-          'viewC': {
+          'viewD': {
             templateUrl: 'views/about.html',
             controller: 'AboutCtrl'
           }

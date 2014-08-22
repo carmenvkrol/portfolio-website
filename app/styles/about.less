@@ -1,7 +1,7 @@
 @lightblue: #BDD9FF;
 
 #about {
-  height: 650px;
+  height: 550px;
   background-image: url('/images/titanium-texture-cropped.jpg');
 
   .about-header {
@@ -27,87 +27,30 @@
     font-size: 18px;
   }
 
-  ul.about-credential-list {
-    height: 100px;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-credential-list {
-   list-style-type: none;
-   padding-left: 0;
-    
-  li {
-      display: block;
-      position: relative;
-      float: left;
-      padding: 20px 10px 10px 10px;
-      margin: 3px;
-      text-align: center;
+  .contact {
+    a {
+      font-size: 18px;
       color: white;
-      font-family: 'Code', Futura, sans-serif;
-      p {
-        padding-top: 10px;
-        font-size: 18px;
-      }
-
-      /*&:first-child{
-        padding: 5px 5px 5px 0;
-        margin-left: 27px;
-      }*/
-
-      &:last-child{
-        padding-right: 0;
-      }
-    }
-  }
-}
-
-.icon-html5-02 {
-  font-size: 48px;
-  color: @lightblue;
-}
-
-.icon-css3-02 {
-  font-size: 48px;
-  color: @lightblue;
-}
-
-.icon-prog-js02 {
-  font-size: 48px;
-  color: @lightblue;
-}
-
-.icon-prog-jquery {
-  font-size: 48px;
-  color: @lightblue;
-}
-
-.icon-angularjs {
-  font-size: 48px;
-  color: @lightblue;
-}
-
-.contact {
-  a {
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    span {
-      font-size: 36px;
       text-align: center;
+      span {
+        font-size: 36px;
+        text-align: center;
+      }
+      &:hover {
+        text-decoration: none;
+        color: @lightblue;
+      }
     }
-    &:hover {
-      text-decoration: none;
-      color: @lightblue;
-    }
-  }
   li {
-    list-style-type: none;
-    padding-bottom: 25px;
-    &:first-child {
-      padding-top: 5px;
+      list-style-type: none;
+      padding-bottom: 25px;
+      &:first-child {
+        padding-top: 5px;
+      }
     }
- }
+}
+
+
+
+
 }
