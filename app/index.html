@@ -22,12 +22,12 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="IndexCtrl">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ui-sref="home">Home</a></li>
-          <li><a ui-sref="about">About</a></li>
-          <li><a ui-sref="home">Contact</a></li>
+        <ul class="light-blue nav nav-pills pull-right">
+          <li><a ng-click="scrollTo('portfolio')">PORTFOLIO</a></li>
+          <li><a ng-click="scrollTo('about')">ABOUT</a></li>
+          <li><a ng-click="scrollTo('about')">CONTACT</a></li>
         </ul>
         <ul class="socialmedia">
           <li>
@@ -98,6 +98,7 @@
         <script src="scripts/controllers/main-image.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/portfolio.js"></script>
+        <script src="scripts/controllers/index.js"></script>
         <!-- endbuild -->
     <!--[if lt IE 8]><script src="../pictonic/js/pictonic.min.js"></script><![endif]-->
 </body>
