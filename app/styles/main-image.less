@@ -7,18 +7,27 @@
   height: 1000px;
   top: 0;
   z-index: -1;
+  @media (max-width: 710px) {
+    height: 700px;
+  }
 }
 
 .main-headline {
     text-align: center;
     vertical-align: middle;
     height: 400px;
+    @media (max-width: 710px) {
+      height: 300px;
+    }
     h1 {
-      padding-top: 150px;
+      padding-top: 100px;
       padding-bottom: 0;
       color: #FFF;
       font-family: 'Code', Futura, sans-serif;
       font-size: 90px;
+      @media (max-width: 710px) {
+        font-size: 60px;
+      }
     }
     h3 {
       margin-top: 0;
@@ -26,6 +35,9 @@
       color: #BDD9FF;
       font-family: 'Code', Futura, sans-serif;
       font-size: 36px;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 }
 
@@ -52,6 +64,9 @@
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 710px) {
+    width: 400px;
+  }
     
   li {
     display: block;
@@ -61,35 +76,57 @@
     text-align: center;
     color: white;
     font-family: 'Code', Futura, sans-serif;
+    @media (max-width: 710px) {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
 
     p {
       padding-top: 10px;
       font-size: 18px;
+      @media (max-width: 710px) {
+        font-size: 12px;
+      }
     }
 
     span.icon-html5-02 {
       font-size: 60px;
       color: @lightblue;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 
     span.icon-css3-02 {
       font-size: 60px;
       color: @lightblue;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 
     span.icon-prog-js02 {
       font-size: 60px;
       color: @lightblue;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 
     span.icon-prog-jquery {
       font-size: 60px;
-      color: @lightblue
+      color: @lightblue;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 
     span.icon-angularjs {
       font-size: 60px;
       color: @lightblue;
+      @media (max-width: 710px) {
+        font-size: 30px;
+      }
     }
 
     &:first-child{

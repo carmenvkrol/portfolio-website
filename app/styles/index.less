@@ -42,10 +42,22 @@ nav.navbar.navbar-default {
   background-color: transparent;
 }
 
+#example-navbar-collapse {
+  border: none;
+  box-shadow: none;
+}
+
 nav {
   display: inline-block;
   float: right;
   cursor: pointer;
+  list-style-type: none;
+
+  .nav-pills > li {
+    @media (max-width: 768px) {
+      float: none;
+    }
+  }
 
   .nav-pills > li > a {
     color: white;
@@ -54,6 +66,13 @@ nav {
     color: @lightblue;
     background-color: transparent;
     }
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  .navbar-collapse {
+    padding-right: 0;
   }
 }
 
