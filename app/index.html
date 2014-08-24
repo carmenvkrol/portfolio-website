@@ -24,11 +24,24 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-controller="IndexCtrl">
       <div class="header">
-        <ul class="light-blue nav nav-pills pull-right">
-          <li><a ng-click="scrollTo('portfolio')">PORTFOLIO</a></li>
-          <li><a ng-click="scrollTo('about')">ABOUT</a></li>
-          <li><a ng-click="scrollTo('about')">CONTACT</a></li>
-        </ul>
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" 
+              data-target="#example-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="light-blue nav nav-pills pull-right">
+              <li><a ng-click="scrollTo('portfolio')">PORTFOLIO</a></li>
+              <li><a ng-click="scrollTo('about')">ABOUT</a></li>
+              <li><a ng-click="scrollTo('about')">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
         <ul class="socialmedia">
           <li>
             <a href="mailto:carmenvkrol@gmail.com">

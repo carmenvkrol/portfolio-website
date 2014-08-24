@@ -1,4 +1,5 @@
 @lightblue: #BDD9FF;
+@gray: #ABABAB;
 
 .socialmedia {
     list-style: none;
@@ -15,23 +16,44 @@
 .icon-github-01{
   font-size: 32px;
   color: @lightblue;
+  &:hover {
+    color: @gray;
+  }
 }
 
 .icon-mail{
   font-size: 32px;
   color: @lightblue;
+  &:hover {
+    color: @gray;
+  }
 }
 
 .icon-twitter-3 {
   font-size: 32px;
   color: @lightblue;
-}
-
-.nav-pills > li > a {
-  color: white;
-  font-size: 18px;
   &:hover {
-    color: @lightblue;
-    background-color: transparent;
+    color: @gray;
   }
 }
+
+nav.navbar.navbar-default {
+  border: none;
+  background-color: transparent;
+}
+
+nav {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+
+  .nav-pills > li > a {
+    color: white;
+    font-size: 18px;
+    &:hover {
+    color: @lightblue;
+    background-color: transparent;
+    }
+  }
+}
+
