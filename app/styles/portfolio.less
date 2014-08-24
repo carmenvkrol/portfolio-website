@@ -6,15 +6,26 @@
 }
 
 .portfolio-header {
-  margin-top: 330px;
+  margin-top: 370px;
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: @lightblue;
+  @media (max-width: 768px) {
+    margin-top: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media (max-width: 710px) {
+    margin-top: 200px;
+  }
 
   h1 {
     text-align: center;
     font-family: 'Code', Futura, sans-serif;
     font-size: 70px;
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
   }
 }
 
@@ -22,32 +33,74 @@
   background-color: #ECF4FF;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (max-width: 990px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.portfolio-shade-large {
+  @media (max-width: 990px) {
+    display: none;
+  }
+}
+
+.portfolio-shade-small {
+  @media (min-width: 990px) {
+    display: none;
+  }
+  @media (max-width: 990px) {
+    display: block;
+  }
 }
 
 .portfolio-description {
   h2 {
     font-size: 45px;
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
   }
   h4 {
     text-align: center;
     font-size: 20px;
     font-style: italic;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
+    @media (max-width: 990px) {
+      text-align: left;
+    }
   }
   p {
     padding-top: 20px;
     font-size: 18px;
+    @media (max-width: 1024px) {
+      padding-top: 10px;
+      font-size: 14px;
+    }
   }
   button {
     margin-top: 15px;
     border: 1px solid @gray;
     background-color: @lightblue;
     font-size: 18px;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 990px) {
+    margin-bottom: 40px;
   }
 }
 
 .portfolio-item {
     margin-top: 150px;
     margin-bottom: 150px;
+    @media (max-width: 990px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
     img {
       width: 100%;
       height: 100%;
