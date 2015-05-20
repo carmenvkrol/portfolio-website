@@ -70,6 +70,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "less": "lessc styles/main.less > styles/main.css"
   }
 }

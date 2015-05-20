@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Code';
+  src: url('fonts/Code_Pro_Demo-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Futura, Arial, sans-serif;
+}
+.code-font {
+  font-family: 'Code', Futura, sans-serif;
+}
+header {
+  position: fixed;
+  background-color: #323232;
+}
+header .headerName {
+  font-family: 'Code', Futura, sans-serif;
+  color: white;
+}
+header .headerName h1 {
+  margin-bottom: 0;
+  font-size: 4.0rem;
+  font-size: 40px;
+}
+header .headerName h2 {
+  margin-top: 0;
+}
+#header.scrollDown {
+  background-color: #fff;
+}
+#scroll-position {
+  position: relative;
+}
+body {
+  min-height: 1000px;
+}
