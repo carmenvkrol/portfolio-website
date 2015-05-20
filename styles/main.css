@@ -13,27 +13,66 @@ body {
 .code-font {
   font-family: 'Code', Futura, sans-serif;
 }
-header {
+header#header {
   position: fixed;
+  width: 100%;
   background-color: #323232;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
-header .headerName {
+header#header .headerName {
+  float: left;
+  display: inline-block;
   font-family: 'Code', Futura, sans-serif;
   color: white;
 }
-header .headerName h1 {
+header#header .headerName h1 {
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: 4.0rem;
   font-size: 40px;
 }
-header .headerName h2 {
+header#header .headerName h2 {
   margin-top: 0;
+  font-size: 2.8rem;
+  font-size: 28px;
+  text-align: center;
 }
-#header.scrollDown {
+header#header .header {
+  float: right;
+  display: inline-block;
+  margin-top: 26px;
+}
+header#header .header .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+header#header .header .navbar-default a {
+  color: #fff;
+}
+header#header .header .navbar-default .nav > li > a:hover,
+header#header .header .navbar-default .nav > li > a:focus {
+  background-color: transparent;
+}
+header#header .header .navbar-default .navbar-toggle {
+  margin-top: 4px;
+  border: none;
+}
+header#header .header .navbar-default .navbar-toggle:hover,
+header#header .header .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+header#header .header .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
-#scroll-position {
-  position: relative;
+header#header .header .navbar-default .navbar-collapse {
+  box-shadow: none;
+  border-top: none;
+}
+#header.scrollDown {
+  background-color: #b9b9b9;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 body {
   min-height: 1000px;
