@@ -13,6 +13,9 @@ body {
 .code-font {
   font-family: 'Code', Futura, sans-serif;
 }
+.body-font {
+  font-family: Futura, sans-serif;
+}
 header#header {
   position: fixed;
   width: 100%;
@@ -73,6 +76,41 @@ header#header .header .navbar-default .navbar-collapse {
   background-color: #b9b9b9;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #323232;
+}
+footer h1 {
+  font-family: 'Code', Futura, sans-serif;
+  color: #fff;
+}
+footer .social-media-container ul {
+  margin: 20px auto 0 auto;
+  width: 305px;
+  padding-left: 0;
+  list-style-type: none;
+}
+footer .social-media-container ul li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+footer .social-media-container ul li .icon-github-01,
+footer .social-media-container ul li .icon-twitter-3,
+footer .social-media-container ul li .icon-linkedin,
+footer .social-media-container ul li .icon-mail {
+  font-size: 42rem;
+  font-size: 42px;
+  color: #fff;
+}
+footer p {
+  margin-bottom: 0;
+  text-align: right;
+  font-family: 'Code', Futura, sans-serif;
+  color: #fff;
 }
 body {
   min-height: 1000px;

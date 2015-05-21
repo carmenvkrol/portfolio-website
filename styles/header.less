@@ -1,9 +1,10 @@
+@import 'utils/_colors.less';
 @import 'utils/_fonts.less';
 
 header#header {
  position: fixed;
  width: 100%;
- background-color: #323232;
+ background-color: @dark-grey;
  -webkit-transition: background-color 1s;
  transition: background-color 1s;
 
@@ -60,7 +61,7 @@ header#header {
 }
 
 #header.scrollDown {
-  background-color: #b9b9b9;
+  background-color: @light-grey;
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
