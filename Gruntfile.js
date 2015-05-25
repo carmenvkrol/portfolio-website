@@ -1,11 +1,5 @@
-// Generated on 2014-07-14 using generator-angular 0.9.2
+// Heavily edited version of generated on 2014-07-14 using generator-angular 0.9.2
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
 
@@ -15,17 +9,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Configurable paths for the application
-  var appConfig = {
-    app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
-  };
-
   // Define the configuration for all the tasks
   grunt.initConfig({
-
-    // Project settings
-    //yeoman: appConfig,
 
     // Less settings
     less: {
@@ -42,78 +27,6 @@ module.exports = function (grunt) {
       }
     },
 
-    recess: {
-      options: {
-            compile: true
-        },
-        dist: {
-            files: [{
-                expand: true,
-                cwd: 'styles',
-                src: '{,*/}*.less',
-                dest: '.tmp/styles/',
-                ext: '.css'
-           }]
-        }
-    },
-
-    // Watches files for changes and runs tasks based on the changed files
-    watch: {
-      styles: {
-        files: ['styles/{,*/}*.css'],
-        tasks: ['newer:less', 'autoprefixer']
-      },
-      gruntfile: {
-        files: ['Gruntfile.js']
-      },
-      recess: {
-        files: ['styles/{,*/}*.less'],
-        tasks: ['recess:dist']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          'index.html',
-          'scripts/{,*/}*.js',
-          '.tmp/styles/{,*/}*.css',
-          'styles/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
-      }
-    },
-
-    // The actual grunt server settings
-    connect: {
-      options: {
-        port: 9000,
-        // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
-        livereload: 35729
-      },
-      livereload: {
-        options: {
-          open: true,
-          middleware: function (connect) {
-            return [
-              connect.static('.tmp'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect.static(appConfig.app)
-            ];
-          }
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          base: 'dist/'
-        }
-      }
-    },
-
     // Empties folders to start fresh
     clean: {
       dist: {
@@ -125,8 +38,7 @@ module.exports = function (grunt) {
             '!dist/.git*'
           ]
         }]
-      },
-      server: '.tmp'
+      }
     },
 
     // Add vendor prefixed styles
@@ -175,7 +87,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'], //TODO add concat back when have multiple files
+              js: ['concat', 'uglifyjs'],
               css: ['cssmin']
             },
             post: {}
@@ -278,11 +190,6 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: 'dist/images',
-          src: ['generated/*']
-        }, {
-          expand: true,
           cwd: 'bower_components/bootstrap/dist/css/',
           src: 'bootstrap.css',
           dest: 'dist/styles/'
@@ -307,30 +214,6 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-  });
-
-
-  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
-
-    grunt.task.run([
-      'clean:server',
-      'wiredep',
-      'concurrent:server',
-      'less',
-      'autoprefixer',
-      'connect:livereload',
-      'watch'
-    ]);
-  });
-
-  grunt.registerTask('heroku:production', ['clean:server', 'less']);
-
-  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve:' + target]);
   });
 
   grunt.registerTask('build', [
