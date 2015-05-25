@@ -160,9 +160,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           'dist/scripts/{,*/}*.js',
-          'dist/styles/{,*/}*.css',
-          'dist/styles/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          'dist/styles/fonts/*'
+          'dist/styles/{,*/}*.css'
         ]
       }
     },
@@ -213,7 +211,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'styles/images',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: 'dist/images'
+          dest: 'dist/styles/images'
         }]
       }
     },
@@ -234,6 +232,10 @@ module.exports = function (grunt) {
         files: {
           'dist/scripts/scripts.js': [
             'scripts/custom.js'
+          ],
+          'dist/scripts/vendor.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/bootstrap/dist/js/bootstrap.js'
           ]
         }
       }
@@ -281,9 +283,9 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }, {
           expand: true,
-          cwd: 'bower_components/bootstrap/dist',
-          src: 'styles/fonts/*',
-          dest: 'dist/'
+          cwd: 'bower_components/bootstrap/dist/css/',
+          src: 'bootstrap.css',
+          dest: 'dist/styles/'
         }]
       },
       styles: {
