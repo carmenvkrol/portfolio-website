@@ -64,7 +64,6 @@ $(document).ready(function(){
 
       if ($(this).scrollTop() < t3) {
         if ($('#portfolio-description-3').css('opacity') == 1) {
-          console.log('hide image');
           $('#portfolio-description-3')
             .animate({left: 0, opacity: 0}, 1000, function(){
               $(this).hide();
@@ -76,7 +75,6 @@ $(document).ready(function(){
         }
       } else if ($(this).scrollTop() > t3) {
         if ($('#portfolio-description-2').css('opacity') == 0) {
-          console.log('show image');
           $('#portfolio-description-3')
             .show()
             .animate({left: 50, opacity: 1}, 1000);
