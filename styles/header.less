@@ -2,6 +2,8 @@
 @import 'utils/_fonts.less';
 
 header#header {
+ z-index: 1;
+ display: none;
  position: fixed;
  width: 100%;
  background-color: @dark-grey;
@@ -15,7 +17,7 @@ header#header {
     color: white;
     h1 {
       margin-top: 10px;
-      margin-bottom: 0;
+      margin-bottom: 10px;
       font-size: 4.0rem;
       font-size: 40px;
     }
@@ -30,7 +32,11 @@ header#header {
   .header {
     float: right;
     display: inline-block;
-    margin-top: 26px;
+    margin-top: 10px;
+
+    .navbar {
+      margin-bottom: 0;
+    }
 
     .navbar-default {
       background-color: transparent;
