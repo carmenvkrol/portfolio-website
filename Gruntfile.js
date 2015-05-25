@@ -177,7 +177,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['uglifyjs'], //TODO add concat back when have multiple files
+              js: ['concat', 'uglifyjs'], //TODO add concat back when have multiple files
               css: ['cssmin']
             },
             post: {}
@@ -227,6 +227,19 @@ module.exports = function (grunt) {
           dest: 'dist/styles/images'
         }]
       }
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'dist/scripts/scripts.js': [
+            'scripts/custom.js'
+          ]
+        }
+      }
+    },
+    concat: {
+      dist: {}
     },
 
     htmlmin: {
@@ -325,10 +338,10 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'less',
     'autoprefixer',
-    //'concat', 
+    'concat', 
     'copy:dist',
     'cssmin',
-    //'uglify',
+    'uglify',
     'filerev',
     'usemin',
     'htmlmin'
