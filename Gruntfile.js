@@ -25,7 +25,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // Project settings
-    yeoman: appConfig,
+    //yeoman: appConfig,
 
     // Less settings
     less: {
@@ -189,15 +189,21 @@ module.exports = function (grunt) {
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
       html: ['dist/index.html'],
-      css: ['styles/{,*/}*.css'],
+      css: ['dist/styles/main.css'],
       options: {
         assetsDirs: ['dist/','styles/images']
       }
     },
 
     cssmin: {
-      options: {
-        root: '/'
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'styles/',
+          src: ['main.css', 'main.css'],
+          dest: 'dist/styles',
+          ext: '.css'
+        }]
       }
     },
 
