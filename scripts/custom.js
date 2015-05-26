@@ -10,9 +10,13 @@ $(document).ready(function(){
   $(window).scroll(function(){
 
     if ($(this).scrollTop() < t1) {
-      $('#header').fadeOut('slow');
+      if($('#header').is(':visible')) {
+        $('#header').fadeOut('slow');
+      }
     } else if ($(this).scrollTop() > t1) {
-      $('#header').fadeIn('slow');
+      if($('#header').is(':hidden')) {
+        $('#header').fadeIn('slow');
+      }
     }
 
     if ($(window).width() > 1000) {
