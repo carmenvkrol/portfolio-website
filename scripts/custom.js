@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     if ($(window).width() > 1000) {
       
-      if (($(this).scrollTop() > (t2-150)) || ($(this).scrollTop() < (t1+100))) {
+      if (($(this).scrollTop() > (t2-150)) || ($(this).scrollTop() < (t1+50))) {
         if ($('#portfolio-description-1').css('opacity') == 1) {
           $('#portfolio-description-1')
             .animate({left: 0, opacity: 0}, 1000, function(){
@@ -31,7 +31,7 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t1+100)) || ($(this).scrollTop() < (t2-150))) {
+      } else if (($(this).scrollTop() > (t1+50)) || ($(this).scrollTop() < (t2-150))) {
         if ($('#portfolio-description-1').css('opacity') == 0) {
           $('#portfolio-description-1')
             .show()
@@ -43,7 +43,7 @@ $(document).ready(function(){
       }
 
 
-      if (($(this).scrollTop() > (t3-150)) || ($(this).scrollTop() < (t2+100))) {
+      if (($(this).scrollTop() > (t3-150)) || ($(this).scrollTop() < (t2+50))) {
         if ($('#portfolio-description-2').css('opacity') == 1) {
           $('#portfolio-description-2')
             .animate({right: 0, opacity: 0}, 1000, function(){
@@ -54,7 +54,7 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t2+100)) || ($(this).scrollTop() < (t3-150))) {
+      } else if (($(this).scrollTop() > (t2+50)) || ($(this).scrollTop() < (t3-150))) {
         if ($('#portfolio-description-2').css('opacity') == 0) {
           $('#portfolio-description-2')
             .show()
@@ -65,7 +65,7 @@ $(document).ready(function(){
         }
       }
 
-      if (($(this).scrollTop() < (t3+100)) || ($(this).scrollTop() > (t4-150))) {
+      if (($(this).scrollTop() < (t3+50)) || ($(this).scrollTop() > (t4-150))) {
         if ($('#portfolio-description-3').css('opacity') == 1) {
           $('#portfolio-description-3')
             .animate({left: 0, opacity: 0}, 1000, function(){
@@ -76,7 +76,7 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t3+100)) || ($(this).scrollTop() < (t4-150))) {
+      } else if (($(this).scrollTop() > (t3+50)) || ($(this).scrollTop() < (t4-150))) {
         if ($('#portfolio-description-3').css('opacity') == 0) {
           $('#portfolio-description-3')
             .show()
