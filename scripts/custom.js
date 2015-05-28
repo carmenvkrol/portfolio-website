@@ -8,13 +8,15 @@ $(document).ready(function(){
   
   $(window).scroll(function(){
 
-    if ($(this).scrollTop() < t1) {
-      if($('#header').is(':visible')) {
-        $('#header').fadeOut('slow');
-      }
-    } else if ($(this).scrollTop() > t1) {
-      if($('#header').is(':hidden')) {
-        $('#header').fadeIn('slow');
+    if ($(window).width() > 768) {
+      if ($(this).scrollTop() < t1) {
+        if($('#header').is(':visible')) {
+          $('#header').fadeOut('slow');
+        }
+      } else if ($(this).scrollTop() > t1) {
+        if($('#header').is(':hidden')) {
+          $('#header').fadeIn('slow');
+        }
       }
     }
 
