@@ -8,7 +8,7 @@
   top: 550vh;
   height: 90vh;
   @media (max-width: 1000px) {
-    position: relative;
+    .max-width-1000;
     height: auto;
   }
   width: 100%;
@@ -16,29 +16,76 @@
   padding-top: 80px;
   padding-bottom: 10vh;
 
+  h1 {
+    .code-font;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    @media (max-width: 1050px) {
+      margin-bottom: 20px;
+    }
+  }
+
   .about-image-container {
     .about-container;
+    margin-right: 20px;
+    @media (max-width: 1000px) {
+      height: auto;
+    }
 
     .about-image {
       .vertical-align;
+      @media (max-width: 1050px) {
+        top: inherit;
+        transform: none;
+        -webkit-transform: none;
+      }
+      @media (max-width: 1000px) {
+        display: none;
+      }
 
       img {
         height: 100%;
         width: 100%;
       }
     }
+
+    .about-image-small {
+      display: none;
+      @media (max-width: 1000px) {
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+    }
+
+
   }
 
   .about-text-container {
     .about-container;
-
+    @media (max-width: 1000px) {
+      margin-top: 5%;
+      height: auto;
+    }
     .about-text {
       .vertical-align;
-      h1 {
-        .code-font;
-        margin-top: 0;
-        margin-bottom: 10px;
-        text-align: center;
+      @media (max-width: 1050px) {
+        top: inherit;
+        transform: none;
+        -webkit-transform: none;
+      }
+      @media (max-width: 1000px) {
+        position: relative;
+        margin: 0 auto;
+        width: 65%;
+        height: auto;
       }
 
       p {
