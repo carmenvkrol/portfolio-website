@@ -1,20 +1,15 @@
-.about-container {
-  position: relative;
-  height: 70vh;
-}
-
 #about {
   position: absolute;
   top: 550vh;
   height: 90vh;
-  @media (max-width: 1000px) {
-    .max-width-1000;
-    height: auto;
-  }
   width: 100%;
   background-color: @light-light-blue;
   padding-top: 80px;
   padding-bottom: 10vh;
+  @media (max-width: 1000px) {
+    .max-width-1000;
+    height: auto;
+  }
 
   h1 {
     .code-font;
@@ -35,11 +30,7 @@
 
     .about-image {
       .vertical-align;
-      @media (max-width: 1050px) {
-        top: inherit;
-        transform: none;
-        -webkit-transform: none;
-      }
+      .about-no-vertical-align-1050;
       @media (max-width: 1000px) {
         display: none;
       }
@@ -48,6 +39,7 @@
         height: 100%;
         width: 100%;
       }
+
     }
 
     .about-image-small {
@@ -56,15 +48,16 @@
         display: block;
         margin: 0 auto;
         width: 30%;
+
         img {
           border-radius: 50%;
           height: 100%;
           width: 100%;
         }
+
       }
 
     }
-
 
   }
 
@@ -74,13 +67,10 @@
       margin-top: 5%;
       height: auto;
     }
+
     .about-text {
       .vertical-align;
-      @media (max-width: 1050px) {
-        top: inherit;
-        transform: none;
-        -webkit-transform: none;
-      }
+      .about-no-vertical-align-1050;
       @media (max-width: 1000px) {
         position: relative;
         margin: 0 auto;
@@ -91,6 +81,7 @@
       p {
         font-size: 16rem;
         font-size: 16px;
+
         a {
           &:hover {
             color: #000000;
@@ -99,8 +90,11 @@
             text-decoration: none;
           }
         }
+
       }
+
     }
+
   }
 
 }

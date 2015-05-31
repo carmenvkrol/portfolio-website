@@ -143,8 +143,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/scripts/scripts.js': [
-            'scripts/header.js',
-            'scripts/portfolio.js'
+            'scripts/custom.js'
           ],
           'dist/scripts/vendor.js': [
             'bower_components/jquery/dist/jquery.js',
