@@ -4,7 +4,26 @@ $(document).ready(function(){
   var t2 = $('#portfolio-item-2').offset().top;
   var t3 = $('#portfolio-item-3').offset().top;
   var t4 = $('#about').offset().top;
-  console.log(t4);
+
+  $('#about-link').click(function(){
+    $('html body').animate({
+      scrollTop: $('#about').offset().top
+    }, 2000);
+  });
+
+  if ($(window).width() > 1000) {
+    $('#portfolio-link').click(function(){
+      $('html body').animate({
+        scrollTop: $("#portfolio-item-1").offset().top
+      }, 2000);
+    });
+  } else {
+    $('#portfolio-link').click(function(){
+      $('html body').animate({
+        scrollTop: $("#portfolio-header").offset().top
+      }, 2000);
+    });
+  }
   
   $(window).scroll(function(){
 
@@ -22,7 +41,8 @@ $(document).ready(function(){
 
     if ($(window).width() > 1000) {
       
-      if (($(this).scrollTop() > (t2-150)) || ($(this).scrollTop() < (t1+50))) {
+      if (($(this).scrollTop() > (t2-100)) || ($(this).scrollTop() < (t1+25))) {
+        console.log('portfolio item 1 hide called');
         if ($('#portfolio-description-1').css('opacity') == 1) {
           $('#portfolio-description-1')
             .animate({left: 0, opacity: 0}, 1000, function(){
@@ -33,11 +53,12 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t1+50)) || ($(this).scrollTop() < (t2-150))) {
+      } else if (($(this).scrollTop() > (t1+25)) || ($(this).scrollTop() < (t2-100))) {
+        console.log('portfolio item 1 show called');
         if ($('#portfolio-description-1').css('opacity') == 0) {
           $('#portfolio-description-1')
             .show()
-            .animate({left: 150, opacity: 1}, 1000);
+            .animate({left: 75, opacity: 1}, 1000);
           $('#portfolio-image-1')
             .show()
             .animate({right: 50, opacity: 1}, 1000);
@@ -45,7 +66,7 @@ $(document).ready(function(){
       }
 
 
-      if (($(this).scrollTop() > (t3-150)) || ($(this).scrollTop() < (t2+50))) {
+      if (($(this).scrollTop() > (t3-100)) || ($(this).scrollTop() < (t2+25))) {
         if ($('#portfolio-description-2').css('opacity') == 1) {
           $('#portfolio-description-2')
             .animate({right: 0, opacity: 0}, 1000, function(){
@@ -56,18 +77,18 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t2+50)) || ($(this).scrollTop() < (t3-150))) {
+      } else if (($(this).scrollTop() > (t2+25)) || ($(this).scrollTop() < (t3-100))) {
         if ($('#portfolio-description-2').css('opacity') == 0) {
           $('#portfolio-description-2')
             .show()
-            .animate({right: 150, opacity: 1}, 1000);
+            .animate({right: 75, opacity: 1}, 1000);
           $('#portfolio-image-2')
             .show()
             .animate({left: 50, opacity: 1}, 1000);
         }
       }
 
-      if (($(this).scrollTop() < (t3+50)) || ($(this).scrollTop() > (t4-150))) {
+      if (($(this).scrollTop() < (t3+25)) || ($(this).scrollTop() > (t4-100))) {
         if ($('#portfolio-description-3').css('opacity') == 1) {
           $('#portfolio-description-3')
             .animate({left: 0, opacity: 0}, 1000, function(){
@@ -78,11 +99,11 @@ $(document).ready(function(){
               $(this).hide();
             });
         }
-      } else if (($(this).scrollTop() > (t3+50)) || ($(this).scrollTop() < (t4-150))) {
+      } else if (($(this).scrollTop() > (t3+25)) || ($(this).scrollTop() < (t4-100))) {
         if ($('#portfolio-description-3').css('opacity') == 0) {
           $('#portfolio-description-3')
             .show()
-            .animate({left: 150, opacity: 1}, 1000);
+            .animate({left: 75, opacity: 1}, 1000);
           $('#portfolio-image-3')
             .show()
             .animate({right: 50, opacity: 1}, 1000);

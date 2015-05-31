@@ -26,20 +26,10 @@
       </div>
       <div class="header">
         <nav class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" 
-              data-target="#example-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
           <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="light-blue nav nav-pills pull-right">
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">PORTFOLIO</a></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a id="portfolio-link" href="#">PORTFOLIO</a></li>
+              <li><a id="about-link" href="#">ABOUT</a></li>
             </ul>
           </div>
         </nav>
@@ -126,12 +116,18 @@
   </div>
   <div id="portfolio">
     <div class="container-fluid">
-      <div id="portfolio-item-1" class="row">
-        <div class="col-md-1">
+      <div id="portfolio-header" class="row">
+        <div class="col-md-12 portfolio-header">
+          <h1>PORTFOLIO</h1>
         </div>
-        <div id="portfolio-description-1" class="col-md-3">
-          <h1>Blocitoff</h1>
-          <h2>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h2>
+      </div>
+      <div id="portfolio-item-1" class="row">
+        <div id="portfolio-image-1" class="col-md-8">
+          <img src="styles/images/blocitoff_fullwidth.png" />
+        </div>
+        <div id="portfolio-description-1" class="col-md-4">
+          <h2>Blocitoff</h2>
+          <h3>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h3>
           <p>Self-destructing task list that automatically deletes tasks if not completed within 7 days.  Users create individual accounts by providing a username, email address, and password.  They can then create tasks and delete them when finished.  This app was built using AngularJS, Express, Mongoose, HTML5, and LESS (CSS3) with Bootstrap.</p>
           <div class="button-container">
             <a href="https://blocitoff-cvk.herokuapp.com/#/">
@@ -144,19 +140,14 @@
             </a>
           </div>
         </div>
-        <div id="portfolio-image-1" class="col-md-7 col-md-offset-1">
-          <img src="styles/images/blocitoff_fullwidth.png" />
-        </div>
       </div>
       <div id="portfolio-item-2" class="row">
-        <div id="portfolio-image-2" class="col-md-7 portfolio-image">
+        <div id="portfolio-image-2" class="col-md-8 portfolio-image portfolio-small">
           <img src="styles/images/bloc-pomodoro.png" />
         </div>
-        <div class="col-md-1">
-        </div>
-        <div id="portfolio-description-2" class="col-md-3">
-          <h1>Bloc-Pomodoro</h1>
-          <h2>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h2>
+        <div id="portfolio-description-2" class="col-md-4">
+          <h2>Bloc-Pomodoro</h2>
+          <h3>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h3>
           <p>Web application for using the Pomodoro technique.  It includes 3 timers: Pomodoro, Short Break, and Long Break. There is also task functionality, in which users can create and delete tasks for the pomodoro sessions.  The app was built using AngularJS, Express, Mongoose, HTML5, and LESS (CSS3) with Bootstrap.</p>
           <div class="button-container">
             <a href="https://bloc-pomodoro-cvk.herokuapp.com/#!/">
@@ -169,15 +160,17 @@
             </a>
           </div>
         </div>
-        <div class="col-md-1">
+        <div id="portfolio-image-2" class="col-md-8 portfolio-image portfolio-large">
+          <img src="styles/images/bloc-pomodoro.png" />
         </div>
       </div>
       <div id="portfolio-item-3" class="row">
-        <div class="col-md-1">
+        <div id="portfolio-image-3" class="col-md-8">
+          <img src="styles/images/listy.png" />
         </div>
-        <div id="portfolio-description-3" class="col-md-3">
-          <h1>Listy</h1>
-          <h2>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h2>
+        <div id="portfolio-description-3" class="col-md-4">
+          <h2>Listy</h2>
+          <h3>Project for <a href="http://www.bloc.io">Bloc</a>'s Front-End Development Program</h3>
           <p>Users can create an account in which they make and edit bookmarks. The bookmarks can include a link, comments, and tags. Users can search bookmarks and sort them by tags. The tags can be edited and deleted. The app was built using AngularJS, Express, Mongoose, HTML5, and LESS (CSS3) with Bootstrap.</p>
           <div class="button-container">
             <a href="https://listy-cvk.herokuapp.com/#!/">
@@ -189,9 +182,6 @@
                 <button type="button" class="btn btn-default">Github Repo</button>
               </a>
           </div>
-        </div>
-        <div id="portfolio-image-3" class="col-md-7 col-md-offset-1">
-          <img src="styles/images/listy.png" />
         </div>
       </div>
     </div>
@@ -230,7 +220,7 @@
         <div class="col-md-4">
           <div class="social-media-container">
             <ul>
-              <li>
+              <li id="github">
                 <a href="https://github.com/carmenvkrol">
                   <span class="icon-github-01"></span>
                 </a>
