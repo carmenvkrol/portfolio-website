@@ -1,17 +1,19 @@
 #top {
   .section;
   top: 0;
+  padding-top: 2vh;
   background: url('images/main-image-background.jpg');
   @media (max-width: 768px) {
     background: @dark-grey;
   }
-  padding-top: 2vh;
+
   .social-media-container{
     position: absolute;
     height: 10vh;
     @media (max-width: 1000px) {
       .max-width-1000;
     }
+
     ul {
       list-style-type: none;
       @media (max-width: 768px) {
@@ -19,6 +21,7 @@
         padding-left: 0;
         width: 235px;
       }
+
       li {
         display: inline-block;
         margin-left: 15px;
@@ -32,13 +35,16 @@
           }
         }
       }
+
     }
+
   }
+
   .top-text-container {
-    .code-font;
     position: absolute;
     top: 10vh;
     height: 70vh;
+    .code-font;
     @media (max-width: 1000px) {
       .max-width-1000;
     }
@@ -46,6 +52,7 @@
       margin-top: 30px;
       margin-bottom: 100px;
     }
+
     .top-text {
       .vertical-align;
       margin: 0 auto;
@@ -56,6 +63,7 @@
       @media (max-width: 768px) {
         width: auto;
       }
+
       h1 {
         margin-bottom: 0;
         text-align: center;
@@ -63,14 +71,18 @@
         font-size: 72px;
         color: #fff;
       }
+
       p {
         text-align: center;
         font-size: 24rem;
         font-size: 24px;
         color: @light-blue;
       }
+
     }
+
   }
+
   ul.credential-list {
     position: absolute;
     top: 80vh;
@@ -88,6 +100,7 @@
       width: 175px;
       height: inherit;
     }
+
     li {
       display: inline-block;
       margin-left: 15px;
@@ -99,12 +112,14 @@
           margin-bottom: 30px;
         }
       }
+
       span {
         margin-bottom: 5px;
         @media (max-width: 768px) {
           display: inline-block;
         }
       }
+
       .icon-html5-02, .icon-css3-02, .icon-prog-js02, .icon-prog-jquery, .icon-angularjs {
         font-size: 48rem;
         font-size: 48px;
@@ -113,7 +128,9 @@
           margin: 0 auto;
           text-align: center;
         }
+
       }
+
       p {
         text-align: center;
         color: #fff;
@@ -123,6 +140,9 @@
           vertical-align: middle;
         }
       }
+
     }
+
   }
+
 }
