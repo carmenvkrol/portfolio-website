@@ -1,5 +1,6 @@
 #top {
   .section;
+  position: relative;
   top: 0;
   padding-top: 2vh;
   background: url('images/main-image-background.jpg');
@@ -7,12 +8,10 @@
     background: @dark-grey;
   }
 
-  .social-media-container{
-    .max-width-1000;
-    position: absolute;
-    height: 10vh;
+  .social-media-container {
 
     ul {
+      position: absolute;
       list-style-type: none;
       @media (max-width: 768px) {
         margin: 10px auto 0 auto;
