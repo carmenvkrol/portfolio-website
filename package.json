@@ -52,6 +52,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "less": "lessc styles/main.less > styles/main.css"
+    "less": "lessc styles/less/main.less > styles/main.css"
   }
 }

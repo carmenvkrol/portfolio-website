@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         },
         files: {
           //target.css file: source.less file
-          'styles/main.css': 'styles/main.less'
+          'styles/main.css': 'styles/less/main.less'
         }
       }
     },
@@ -143,7 +143,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'dist/scripts/scripts.js': [
-            'scripts/custom.js'
+            'scripts/header.js',
+            'scripts/portfolio.js'
           ],
           'dist/scripts/vendor.js': [
             'bower_components/jquery/dist/jquery.js',
