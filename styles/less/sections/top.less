@@ -8,11 +8,9 @@
   }
 
   .social-media-container{
+    .max-width-1000;
     position: absolute;
     height: 10vh;
-    @media (max-width: 1000px) {
-      .max-width-1000;
-    }
 
     ul {
       list-style-type: none;
@@ -35,7 +33,7 @@
             color: @light-blue;
           }
         }
-        
+
       }
 
     }
@@ -43,13 +41,11 @@
   }
 
   .top-text-container {
+    .code-font;
+    .max-width-1000;
     position: absolute;
     top: 10vh;
     height: 70vh;
-    .code-font;
-    @media (max-width: 1000px) {
-      .max-width-1000;
-    }
     @media (max-width: 768px) {
       margin-top: 30px;
       margin-bottom: 100px;
@@ -86,6 +82,7 @@
   }
 
   ul.credential-list {
+    .max-width-1000;
     position: absolute;
     top: 80vh;
     left: 0;
@@ -95,9 +92,6 @@
     width: 680px;
     list-style-type: none;
     padding-left: 0;
-    @media screen and (max-width: 1000px) {
-      .max-width-1000;
-    }
     @media screen and (max-width: 768px) {
       width: 175px;
       height: inherit;
