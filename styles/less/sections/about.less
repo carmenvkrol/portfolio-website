@@ -21,74 +21,99 @@
     }
   }
 
-  .about-image-container {
-    .about-container;
-    margin-right: 20px;
-    @media (max-width: 1000px) {
-      height: auto;
-    }
+  .about-container {
+    max-width: 1000px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 50px auto 0 auto;
 
-    .about-image {
-      .vertical-align;
-      .about-no-vertical-align-1050;
-      @media (max-width: 1000px) {
-        display: none;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-
-    }
-
-    .about-image-small {
-      display: none;
+    .about-image-container {
+      display: inline-block;
+      margin-right: 20px;
+      height: 100%;
+      width: 45%;
       @media (max-width: 1000px) {
         display: block;
         margin: 0 auto;
-        width: 30%;
+        height: auto;
+        max-width: none;
+        width: 100%;
+      }
+
+      .about-image {
+        position: relative;
+        .about-no-vertical-align-1050;
+        @media (max-width: 1000px) {
+          display: none;
+        }
 
         img {
-          border-radius: 50%;
           height: 100%;
           width: 100%;
         }
 
       }
 
-    }
+      .about-image-small {
+        display: none;
+        @media (max-width: 1000px) {
+          display: block;
+          margin: 0 auto;
+          width: 30%;
 
-  }
+          img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+          }
 
-  .about-text-container {
-    .about-container;
-    @media (max-width: 1000px) {
-      margin-top: 5%;
-      height: auto;
-    }
+        }
 
-    .about-text {
-      .vertical-align;
-      .about-no-vertical-align-1050;
-      @media (max-width: 1000px) {
-        position: relative;
-        margin: 0 auto;
-        width: 65%;
-        height: auto;
       }
 
-      p {
-        font-size: 16rem;
-        font-size: 16px;
+    }
 
-        a {
-          &:hover {
-            color: #000000;
+    .about-text-container {
+      display: inline-block;
+      float: right;
+      height: 100%;
+      width: 48%;
+      @media (max-width: 1000px) {
+        display: block;
+        float: none;
+        margin: 5% auto 0 auto;
+        height: auto;
+        width: 100%;
+      }
+
+      .about-text {
+        .vertical-align;
+        .about-no-vertical-align-1050;
+        @media (max-width: 1000px) {
+          position: relative;
+          margin: 0 auto;
+          width: 65%;
+          height: auto;
+        }
+
+        p {
+          font-size: 18rem;
+          font-size: 18px;
+          @media (max-width: 1000px) {
+            font-size: 16rem;
+            font-size: 16px;
           }
-          &:visited {
-            text-decoration: none;
+
+          a {
+            &:hover {
+              color: #000000;
+            }
+            &:visited {
+              text-decoration: none;
+            }
           }
+
         }
 
       }
