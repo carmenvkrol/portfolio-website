@@ -3,6 +3,10 @@
 
 module.exports = function (grunt) {
 
+  var files_to_bump = [
+    'dist/index.html'
+  ];
+
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
@@ -216,6 +220,18 @@ module.exports = function (grunt) {
     },
   });
 
+  grunt.registerTask('addVers', 'add version to files to override caching', function(){
+    var re = /\?version_tag=.*(?=\")/gi;
+    grunt.file.expand(files_to_bump).forEach( function(file, idx) {
+      var content = grunt.file.read(file).replace(re, function(match, p1){
+        var results = Date.now();
+        var replaceSection = match.match(/version_tag=(.*)/)[1];
+        return match.replace(replaceSection, results);
+      });
+      grunt.file.write(file, content);
+    });
+  });
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
@@ -227,9 +243,9 @@ module.exports = function (grunt) {
     'copy:dist',
     'cssmin',
     'uglify',
-    'filerev',
     'usemin',
-    'htmlmin'
+    'addVers',
+    'htmlmin',
   ]);
 
   grunt.registerTask('default', [
