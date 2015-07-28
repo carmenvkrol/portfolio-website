@@ -221,11 +221,12 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('addVers', 'add version to files to override caching', function(){
-    var re = /\?version_tag=.*(?=\")/gi;
+    var re = /\?version_tag=VERSION/gi;
     grunt.file.expand(files_to_bump).forEach( function(file, idx) {
       var content = grunt.file.read(file).replace(re, function(match, p1){
+        console.log(match);
         var results = Date.now();
-        var replaceSection = match.match(/version_tag=(.*)/)[1];
+        var replaceSection = match.match(/version_tag=(VERSION)/)[1];
         return match.replace(replaceSection, results);
       });
       grunt.file.write(file, content);
