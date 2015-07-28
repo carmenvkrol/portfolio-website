@@ -34,7 +34,7 @@ $(document).ready(function(){
     // ** HEADER ** //
 
     if ($(window).width() > 768) {
-      if ($(this).scrollTop() < t1) {
+      if ($(this).scrollTop() < t1 || $(this).scrollTop() > t4) {
         if($('#header').is(':visible')) {
           $('#header').fadeOut('slow');
         }
