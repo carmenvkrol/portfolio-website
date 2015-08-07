@@ -146,7 +146,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          'dist/scripts/scripts.js': [
+          'dist/scripts/custom.js': [
             'scripts/custom.js'
           ],
           'dist/scripts/vendor.js': [
