@@ -1,5 +1,5 @@
 #about {
-  .max-width-1000;
+  .max-width-1024;
   position: absolute;
   top: 550vh;
   height: 100vh;
@@ -7,8 +7,11 @@
   background-color: @light-light-blue;
   padding-top: 80px;
   padding-bottom: 10vh;
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     height: auto;
+  }
+  @media screen and (max-width: 767px) {
+    position: relative;
     padding-bottom: 0;
   }
 
@@ -17,7 +20,7 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    @media (max-width: 1050px) {
+    @media screen and (max-width: 1050px) {
       margin-bottom: 20px;
     }
   }
@@ -28,8 +31,11 @@
     width: 100%;
     position: relative;
     margin: 50px auto 50px auto;
-    @media (max-width: 1000px){
+    @media screen and (max-width: 1024px){
       margin-top: 5%;
+    }
+    @media screen and (max-width: 750px) {
+      height: auto;
     }
 
     .about-image-container {
@@ -37,7 +43,7 @@
       margin-right: 20px;
       height: 100%;
       width: 45%;
-      @media (max-width: 1000px) {
+      @media screen and (max-width: 1024px) {
         display: block;
         margin: 0 auto;
         height: auto;
@@ -48,7 +54,7 @@
       .about-image {
         position: relative;
         .about-no-vertical-align-1050;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1024px) {
           display: none;
         }
 
@@ -62,15 +68,16 @@
 
       .about-image-small {
         display: none;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1024px) {
           display: block;
           margin: 0 auto;
-          width: 30%;
+          width: 150px;
 
           img {
             border-radius: 50%;
-            height: 100%;
-            width: 100%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            width: 150px;
           }
 
         }
@@ -84,7 +91,7 @@
       float: right;
       height: 100%;
       width: 48%;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         display: block;
         float: none;
         margin: 5% auto 0 auto;
@@ -95,17 +102,20 @@
       .about-text {
         .vertical-align;
         .about-no-vertical-align-1050;
-        @media (max-width: 1000px) {
+        @media screen and (max-width: 1024px) {
           position: relative;
           margin: 0 auto;
-          width: 90%;
+          width: 65%;
           height: auto;
+        }
+        @media screen and (max-width: 767px) {
+          width: 90%;
         }
 
         p {
           font-size: 18rem;
           font-size: 18px;
-          @media (max-width: 1000px) {
+          @media screen and (max-width: 1024px) {
             font-size: 16rem;
             font-size: 16px;
           }

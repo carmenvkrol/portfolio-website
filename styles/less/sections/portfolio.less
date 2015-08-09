@@ -1,17 +1,17 @@
 #portfolio {
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
   .row {
     .section;
     height: 150vh;
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       width: auto;
     }
 
     .portfolio-header {
       display: none;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         display: block;
         background-color: @light-blue;
         padding-top: 40px;
@@ -21,31 +21,41 @@
 
     &:nth-child(2) {
       top: 100vh;
-      .portfolio-max-width-1000;
+      .portfolio-max-width-1024;
+      @media (max-width: 1024px) {
+        top: initial;
+      }
 
       #portfolio-description-1 {
-        .portfolio-description-1000;
+        .portfolio-description-1024;
         .portfolio-item;
-        .portfolio-no-vertical-align-1000;
+        .portfolio-no-vertical-align-1024;
         .vertical-align;
         padding-right: 10%;
-        @media (max-width: 1000px) {
+        @media (max-width: 1024px) {
+          float: none;
           padding-right: 0;
         }
       }
 
       #portfolio-image-1 {
         .portfolio-item;
-        .portfolio-no-vertical-align-1000;
+        .portfolio-no-vertical-align-1024;
         .vertical-align;
-        @media (max-width: 1000px) {
+        @media (max-width: 1024px) {
+          float: none;
           margin: 0 auto;
           padding-top: 50px;
-          width: 100%;
         }
 
         img {
           .portfolio-img;
+          @media (max-width: 1024px) {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            height: 90%;
+          }
         }
 
       }
@@ -55,14 +65,15 @@
     &:nth-child(3) {
       top: 250vh;
       background-color: @light-light-blue;
-      .portfolio-max-width-1000;
+      .portfolio-max-width-1024;
       .portfolio-large {
         display: block;
       }
       .portfolio-small {
         display: none;
       }
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
+        top: initial;
         .portfolio-large {
           display: none;
         }
@@ -72,21 +83,25 @@
       }
 
       #portfolio-description-2 {
-        .portfolio-description-1000;
+        .portfolio-description-1024;
         .portfolio-item;
-        .portfolio-no-vertical-align-1000;
+        .portfolio-no-vertical-align-1024;
         .vertical-align;
         padding-left: 5%;
-        @media (max-width: 1000px) {
+        @media (max-width: 1024px) {
+          float: none;
           padding-left: 0;
         }
       }
 
       #portfolio-image-2 {
         .portfolio-item;
-        .portfolio-no-vertical-align-1000;
+        .portfolio-no-vertical-align-1024;
         .vertical-align;
-
+        @media (max-width: 1024px) {
+          float: none;
+          margin: 0 auto;
+        }
         img {
           height: 85%;
           width: 85%;
@@ -94,7 +109,7 @@
 
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         #portfolio-image-2.portfolio-large {
           display: none;
         }
@@ -109,23 +124,31 @@
 
       &:last-child {
         top: 400vh;
-        .portfolio-max-width-1000;
+        .portfolio-max-width-1024;
+        @media (max-width: 1024px) {
+          top: initial;
+        }
 
         #portfolio-description-3 {
-          .portfolio-description-1000;
+          .portfolio-description-1024;
           .portfolio-item;
-          .portfolio-no-vertical-align-1000;
+          .portfolio-no-vertical-align-1024;
           .vertical-align;
           padding-right: 10%;
-          @media (max-width: 1000px) {
+          @media (max-width: 1024px) {
+            float: none;
             padding-right: 0;
           }
         }
 
         #portfolio-image-3 {
           .portfolio-item;
-          .portfolio-no-vertical-align-1000;
+          .portfolio-no-vertical-align-1024;
           .vertical-align;
+          @media (max-width: 1024px) {
+            float: none;
+            margin: 0 auto;
+          }
 
           img {
             .portfolio-img;
@@ -139,7 +162,7 @@
       text-align: center;
       font-size: 48rem;
       font-size: 48px;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         display: block;
       }
     }

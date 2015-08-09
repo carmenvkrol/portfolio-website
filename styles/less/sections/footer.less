@@ -1,16 +1,17 @@
 footer {
-  .max-width-1000;
+  .max-width-1024;
   position: absolute;
   top: 650vh;
   width: 100%;
   background: url('images/footer-background.jpg');
-  @media (max-width: 1000px) {
-    position: absolute;
-    height: auto;
-  }
-  @media (max-width: 768px) {
+  // @media screen and (max-width: 1000px) {
+  //   position: absolute;
+  //   height: auto;
+  // }
+  @media screen and (max-width: 767px) {
     position: relative;
-    top: auto;
+    bottom: 0;
+    top: inherit;
     background: @dark-grey;
   }
 
@@ -51,7 +52,7 @@ footer {
     text-align: right;
     .code-font;
     color: #fff;
-    @media (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-top: 20px;
       text-align: center;
     }

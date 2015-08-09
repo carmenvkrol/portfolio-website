@@ -4,7 +4,10 @@
   top: 0;
   padding-top: 2vh;
   background: url('images/main-image-background.jpg');
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  @media (max-width: 767px) {
     background: @dark-grey;
   }
 
@@ -13,10 +16,10 @@
     ul {
       position: absolute;
       list-style-type: none;
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         position: relative;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         margin: 10px auto 0 auto;
         padding-left: 0;
         width: 235px;
@@ -44,11 +47,11 @@
 
   .top-text-container {
     .code-font;
-    .max-width-1000;
+    .max-width-1024;
     position: absolute;
     top: 10vh;
     height: 70vh;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-top: 30px;
       margin-bottom: 100px;
     }
@@ -60,7 +63,7 @@
       right: 0;
       max-width: 600px;
       width: 50%;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         width: auto;
       }
 
@@ -84,7 +87,7 @@
   }
 
   ul.credential-list {
-    .max-width-1000;
+    .max-width-1024;
     position: absolute;
     top: 80vh;
     left: 0;
@@ -94,7 +97,7 @@
     width: 680px;
     list-style-type: none;
     padding-left: 0;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: 175px;
       height: inherit;
     }
@@ -103,18 +106,18 @@
       display: inline-block;
       margin-left: 15px;
       margin-right: 15px;
-      @media (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         &:last-child {
-          margin-bottom: 30px;
+          margin-bottom: 45px;
         }
       }
 
       span {
         margin-bottom: 5px;
-        @media (max-width: 768px) {
-          display: inline-block;
+        @media screen and (max-width: 767px) {
+          display: block;
         }
       }
 
@@ -122,20 +125,25 @@
         font-size: 48rem;
         font-size: 48px;
         color: @light-blue;
-        @media (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           margin: 0 auto;
           text-align: center;
         }
 
       }
 
+      img {
+        @media screen and (max-width: 767px) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
       p {
         text-align: center;
         color: #fff;
-        @media (max-width: 768px) {
-          display: inline-block;
-          margin-left: 10px;
-          vertical-align: middle;
+        @media screen and (max-width: 767px) {
+          margin-top: 7px;
         }
       }
 

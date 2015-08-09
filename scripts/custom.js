@@ -8,7 +8,7 @@ $(document).ready(function(){
     }, 2000);
   });
 
-  if ($(window).width() > 1000) {
+  if ($(window).width() > 1024) {
     $('#portfolio-link').click(function(){
       $('html body').animate({
         scrollTop: $("#portfolio-item-1").offset().top
@@ -33,7 +33,7 @@ $(document).ready(function(){
 
     // ** HEADER ** //
 
-    if ($(window).width() > 768) {
+    if ($(window).width() > 767) {
       if ($(this).scrollTop() < t1 || $(this).scrollTop() > t4) {
         if($('#header').is(':visible')) {
           $('#header').fadeOut('slow');
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     // ** PORTFOLIO ITEMS ** //
 
-    if ($(window).width() > 1000) {
+    if ($(window).width() > 1024) {
       
       if (($(this).scrollTop() > (t2-100)) || ($(this).scrollTop() < (t1+25))) {
         if ($('#portfolio-description-1').css('opacity') == 1) {
