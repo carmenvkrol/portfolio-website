@@ -3,7 +3,7 @@ Portfolio Website
 
 Responsive website built with [jQuery](https://jquery.com/), [LESS](http://lesscss.org/), and [Node.js](http://nodejs.org/).
 
-This repo holds the files for my portfolio website, which you can view at [www.carmenvkrol.com](http://www.carmenvkrol). *Note that this website is deployed from the Github repo: [carmenvkrol.github.io](https://github.com/carmenvkrol/carmenvkrol.github.io).
+This repo holds the files for my portfolio website, which you can view at [www.carmenvkrol.com](http://www.carmenvkrol). *Note that this website is deployed from the Github repo: [carmenvkrol.github.io](https://github.com/carmenvkrol/carmenvkrol.github.io).*
 
 
 Configuration
